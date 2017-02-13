@@ -1,7 +1,7 @@
 <?php
-namespace sarbacane_sdk;
+namespace sarbacane_sdk\Base;
 
-   /**
+   
     require_once "../Authentication/authenticationManager.class.php";
     require_once '../Account/accountManager.class.php';
     require_once '../Messages/messagesManager.class.php';
@@ -9,7 +9,7 @@ namespace sarbacane_sdk;
     require_once '../Lists/listsManager.class.php';
     require_once '../Contacts/contactsManager.class.php';
     require_once '../Fields/fieldsManager.class.php';
-**/
+
    
 
     use sarbacane_sdk\authenticationManager;
