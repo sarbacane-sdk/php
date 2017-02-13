@@ -1,5 +1,7 @@
 <?php
 
+namespace sarbacane_sdk;
+
 class PTCampaign extends baseManager {
     public $id=null;
     public $name=null;

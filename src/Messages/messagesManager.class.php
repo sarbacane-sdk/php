@@ -1,26 +1,13 @@
 <?php
     require_once 'baseManager.class.php';
     
-    class Sms extends baseManager {
-        public $type;
-        public $number;
-        public $message;
-        public $sender;
-        public $campaignName;
-        public $category;
-        public $date;
-    }
+    namespace sarbacane_sdk;
     
-    class Query extends baseManager {
-        public $type;
-        public $identifier;
-        public $snapshotId;
-        public $category;
-    }
+
     
     class messagesManager extends baseManager {
 
-        public static function messagesSend ($sms) {
+        public static function sendSmsMessage ($sms) {
             authenticationManager::ensureLogin();
             if (!$sms->type || !$sms->type == 'notification' && !$sms->type == 'marketing') {
                 die('Error: SMS NOT SENT - You need to specify a Type: notification OR marketing');
@@ -37,7 +24,7 @@
         }
         
         
-        public static function messagesStatus ($msg) {
+        public static function messagesStatus ($SBSmsMessage) {
             authenticationManager::ensureLogin();
             if ($msg->identifier && $msg->snapshotId) {
                 die('Error: Please choose between identifier OR snapshotId\n');

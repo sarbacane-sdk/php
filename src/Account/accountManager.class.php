@@ -1,6 +1,8 @@
 <?php
     require_once 'baseManager.class.php';
     
+    namespace sarbacane_sdk;
+    
     class Blacklist {
         public $type;
         public $identifier;

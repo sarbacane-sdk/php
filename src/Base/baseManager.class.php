@@ -5,6 +5,7 @@
     require_once 'campaignsManager.class.php';
     require_once 'listsManager.class.php';
 
+    namespace sarbacane_sdk;
     // cURL Verify
     
     function _isCurl(){
