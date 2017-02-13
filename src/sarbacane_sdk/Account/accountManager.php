@@ -2,16 +2,17 @@
     
     
     namespace sarbacane_sdk;
-    use sarbacane_sdk\baseManager;
+    //require_once __DIR__ . '/../Base/baseManager.php';
     
     class Blacklist {
         public $type;
         public $identifier;
         public $id;
     }
-    class accountManager extends \sarbacane_sdk {
+    class accountManager extends baseManager {
 
         public static function accountStats () {
+            
             authenticationManager::ensureLogin();
             $curl = parent::getGetCurl(BaseManager::$baseURL.'/account/stats');
             $result = curl_exec($curl);

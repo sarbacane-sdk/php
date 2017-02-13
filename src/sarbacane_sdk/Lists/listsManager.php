@@ -2,10 +2,10 @@
     
     
     namespace sarbacane_sdk;
-    use sarbacane_sdk\baseManager;
     
     
-    class ListsManager extends BaseManager {
+    
+    class ListsManager extends baseManager{
         
         public static function addList ($newList) {
             authenticationManager::ensureLogin();

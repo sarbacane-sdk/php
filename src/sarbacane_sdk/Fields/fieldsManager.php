@@ -6,13 +6,12 @@
  * and open the template in the editor.
  */
 namespace sarbacane_sdk;
-use sarbacane_sdk\baseManager;
 /**
  * Description of fieldsManager
  *
  * @author guru
  */
-class fieldsManager extends baseManager {
+class fieldsManager extends baseManager{
     public static function addField ($newField) {
             authenticationManager::ensureLogin();
             if ( $newField->type != "STRING" && $newField->type != "DATE" && $newField->type != "NUMBER") {

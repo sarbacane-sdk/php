@@ -2,24 +2,10 @@
 
 namespace sarbacane_sdk;
 
-use sarbacane_sdk\baseManager;
 
-class PTCampaign extends baseManager {
-    public $id=null;
-    public $name=null;
-    public $type=null;
-    public $sendList=null;
-    public $sourceAddress=null;
-    public $flash=null;
-    public $message=null;
-    public $date=null;
-    public $externalUrl=null;
-    public $landingPageType=null;
-    public $landingPage=null;
-    public $landingPageTitle=null;
-    public $testIdentifier=null;
-}
-class campaignsManager extends baseManager {
+
+
+class campaignsManager extends baseManager{
 
     public static function campaignsCreate ($newCampaign) {
         authenticationManager::ensureLogin();

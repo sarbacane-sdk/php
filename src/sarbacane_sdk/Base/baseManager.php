@@ -1,17 +1,17 @@
 <?php
-namespace sarbacane_sdk\Base;
+namespace sarbacane_sdk;
 
    
-    require_once "../Authentication/authenticationManager.class.php";
-    require_once '../Account/accountManager.class.php';
-    require_once '../Messages/messagesManager.class.php';
-    require_once '../Campaigns/campaignsManager.class.php';
-    require_once '../Lists/listsManager.class.php';
-    require_once '../Contacts/contactsManager.class.php';
-    require_once '../Fields/fieldsManager.class.php';
+    require_once __DIR__.'/../Authentication/authenticationManager.php';
+    require_once __DIR__.'/../Account/accountManager.php';
+    require_once __DIR__.'/../Messages/messagesManager.php';
+    require_once __DIR__.'/../Campaigns/campaignsManager.php';
+    require_once __DIR__.'/../Lists/listsManager.php';
+    require_once __DIR__.'/../Contacts/contactsManager.php';
+    require_once __DIR__.'/../Fields/fieldsManager.php';
 
    
-
+/**
     use sarbacane_sdk\authenticationManager;
     use sarbacane_sdk\accountManager;
     use sarbacane_sdk\messagesManager;
@@ -19,11 +19,11 @@ namespace sarbacane_sdk\Base;
     use sarbacane_sdk\ListsManager;
     use sarbacane_sdk\contactsManager;
     use sarbacane_sdk\fieldsManager;
-    
+   **/ 
 
 
     // cURL Verify
-    
+    /**
     function _isCurl(){
         return function_exists('curl_version');
     }
@@ -31,7 +31,7 @@ namespace sarbacane_sdk\Base;
     if ( ! _iscurl()) {
         die ('cURL is NOT installed !'); 
     }	
-
+**/
     class baseManager {
 
         

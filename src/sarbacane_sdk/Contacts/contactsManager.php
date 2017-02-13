@@ -6,13 +6,13 @@
  * and open the template in the editor.
  */
 namespace sarbacane_sdk;
-use sarbacane_sdk\baseManager;
+
 /**
  * Description of contactsManager
  *
  * @author guru
  */
-class contactsManager extends baseManager {
+class contactsManager extends baseManager{
     public static function addContact($newContact) {
             authenticationManager::ensureLogin();
             if (!$newContact->attributes) {

@@ -6,14 +6,14 @@
  * and open the template in the editor.
  */
 
-namespace sarbacane_sdk;
+
 
 /**
  * Description of SBMessage
  *
  * @author guru
  */
-class SBSmsMessage extends \messagesManager {
+class SBSmsMessage extends messagesManager{
         public $type;
         public $number;
         public $message;

@@ -1,11 +1,11 @@
 <?php
     
     namespace sarbacane_sdk;
-use sarbacane_sdk\baseManager;
+
     
 
     
-    class messagesManager extends baseManager {
+    class messagesManager extends baseManager{
 
         public static function sendSmsMessage ($sms) {
             authenticationManager::ensureLogin();

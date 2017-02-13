@@ -2,10 +2,10 @@
     
     
     namespace sarbacane_sdk;
+    //require_once __DIR__ . '/../Base/baseManager.php';
     
-    use sarbacane_sdk\baseManager;
     
-    class authenticationManager extends \sarbacane_sdk {
+    class authenticationManager extends baseManager {
         
         
 
