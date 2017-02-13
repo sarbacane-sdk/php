@@ -1,0 +1,11 @@
+{
+    "name": "vendor/sarbacane-sdk",
+    "description": "Sarbacane SDK to send e-mail and text messages (sms).",
+    "authors": [
+        {
+            "name": "Clément BEAUVOIS",
+            "email": "clement.beauvois@sarbacane.com"
+        }
+    ],
+    "require": {}
+}
