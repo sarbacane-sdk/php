@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-namespace sarbacane_sdk\Campaigns;
+namespace sarbacane_sdk;
 
 /**
  * Description of SBSmsCampaign
