@@ -6,6 +6,7 @@ class SBEmailMessage {
         public $mailFrom;
         public $mailFromName;
         public $subject;
-        public $message;
+        public $htmlBody;
+        public $textBody;
         public $recipients;
 }

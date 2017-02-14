@@ -54,8 +54,9 @@ sarbacane_sdk\authenticationManager::setSmsApikey('da3f2a93592ad9f43fb38977e8f64
     $email = new sarbacane_sdk\SBEmailMessage();
     $email->mailFrom = "sender@domain.com";
     $email->mailFromName = "Sender Name";
-    $email->subject = "Message sent by Sarbacane SDK";
-    $email->message = "Here is the content of the message";
+    $email->subject = "Message sent by Sarbacane SDK PHP";
+    $email->htmlBody = "Here is the <b>HTML</b> content of the message.";
+    $email->textBody = "Here is the TEXT content of the message.";
     $email->recipients = array(
         "address1@domain.com",
         "address2@domain.com"

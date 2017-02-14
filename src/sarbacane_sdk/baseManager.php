@@ -4,6 +4,7 @@ namespace sarbacane_sdk;
 
 class baseManager {
 
+    protected static $sdkVersion = "1.0.5";
     protected static $baseURL = 'https://api.primotexto.com/v2/';
     protected static $smtpHost = 'smtp.tipimail.com';
     protected static $smtpPort = 587;
@@ -20,17 +21,20 @@ class baseManager {
         $mail->Password = authenticationManager::getEmailApikey();
         $mail->SMTPSecure = 'tls';
         $mail->Port = baseManager::$smtpPort;
+        
+        $mail->addCustomHeader('X-Sarbacane-SDK-PHP', baseManager::$sdkVersion);
 
         $mail->setFrom($email->mailFrom, $email->mailFromName);
         foreach ($email->recipients as $address) {
             $mail->addAddress($address);
         }
         $mail->isHTML(true);
+        $mail->Body = $email->htmlBody;
+        $mail->AltBody = $email->textBody;
         $mail->Subject = $email->subject;
         $mail->Body = $email->message;
         if (!$mail->send()) {
-            echo 'Message could not be sent.';
-            echo 'Mailer Error: ' . $mail->ErrorInfo;
+            echo 'Error: Message could not be sent: ' . $mail->ErrorInfo;
         }
     }
 

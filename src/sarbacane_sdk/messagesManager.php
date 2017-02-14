@@ -6,8 +6,8 @@ class messagesManager extends baseManager {
 
     public static function sendEmailMessage($email) {
         authenticationManager::ensureEmailTokens();
-        if (!$email->mailFrom || !$email->mailFromName || !$email->subject || !$email->message) {
-            die('Error: mailFrom, mailFromname, subject and message are required.');
+        if (!$email->mailFrom || !$email->mailFromName || !$email->recipients || !$email->subject || !$email->htmlBody || !$email->textBody) {
+            die('Error: mailFrom, mailFromname, subject, recipients, htmlBody and textBody are required.');
         } else {
             baseManager::sendTransport($email);
         }
