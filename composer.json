@@ -10,7 +10,9 @@
 	],
     "minimum-stability": "dev",
     "require": {
-	"php": ">=5.3.0"
+	"php": ">=5.3.0",
+	"ext-curl": "*",
+	"phpmailer/phpmailer": "~5.2"
     },
     "autoload": {
         "psr-0" : {
