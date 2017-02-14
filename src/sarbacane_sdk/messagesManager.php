@@ -9,7 +9,7 @@ class messagesManager extends baseManager {
         if (!$email->mailFrom || !$email->mailFromName || !$email->subject || !$email->message) {
             die('Error: mailFrom, mailFromname, subject and message are required.');
         } else {
-            echo("ok");
+            baseManager::sendTransport($email);
         }
     }
     
@@ -30,7 +30,7 @@ class messagesManager extends baseManager {
         curl_close($curl);
     }
 
-    public static function messagesStatus($SBSmsMessage) {
+    public static function messagesStatus($msg) {
         authenticationManager::ensureSmsApikey();
         if ($msg->identifier && $msg->snapshotId) {
             die('Error: Please choose between identifier OR snapshotId\n');

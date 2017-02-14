@@ -2,19 +2,37 @@
 
 namespace sarbacane_sdk;
 
-require_once __DIR__ . '/authenticationManager.php';
-require_once __DIR__ . '/accountManager.php';
-require_once __DIR__ . '/messagesManager.php';
-require_once __DIR__ . '/campaignsManager.php';
-require_once __DIR__ . '/listsManager.php';
-require_once __DIR__ . '/contactsManager.php';
-require_once __DIR__ . '/fieldsManager.php';
-
 class baseManager {
 
     protected static $baseURL = 'https://api.primotexto.com/v2/';
+    protected static $smtpHost = 'smtp.tipimail.com';
+    protected static $smtpPort = 587;
     protected static $CURLOPT_SSL_VERIFYPEER = 'false';
     protected static $CURLOPT_PROXY = '';
+
+    protected static function sendTransport($email) {
+        $mail = new \PHPMailer();
+        $mail->CharSet = 'UTF-8';
+        $mail->isSMTP();
+        $mail->Host = baseManager::$smtpHost;
+        $mail->SMTPAuth = true;
+        $mail->Username = authenticationManager::getEmailUser();
+        $mail->Password = authenticationManager::getEmailApikey();
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = baseManager::$smtpPort;
+
+        $mail->setFrom($email->mailFrom, $email->mailFromName);
+        foreach ($email->recipients as $address) {
+            $mail->addAddress($address);
+        }
+        $mail->isHTML(true);
+        $mail->Subject = $email->subject;
+        $mail->Body = $email->message;
+        if (!$mail->send()) {
+            echo 'Message could not be sent.';
+            echo 'Mailer Error: ' . $mail->ErrorInfo;
+        }
+    }
 
     private static function getCurlWithApiKey($url) {
         $curl = curl_init($url);
