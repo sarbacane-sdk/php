@@ -8,7 +8,7 @@
 	    "email": "clement.beauvois@sarbacane.com"
 	}
 	],
-    "minimum-stability": "master",
+    "minimum-stability": "stable",
     "require": {
 	"php": ">=5.3.0"
     },
