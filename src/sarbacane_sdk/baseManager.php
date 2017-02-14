@@ -1,15 +1,15 @@
 <?php
 namespace sarbacane_sdk;
 
-   /**
-    require_once __DIR__.'/../Authentication/authenticationManager.php';
-    require_once __DIR__.'/../Account/accountManager.php';
-    require_once __DIR__.'/../Messages/messagesManager.php';
-    require_once __DIR__.'/../Campaigns/campaignsManager.php';
-    require_once __DIR__.'/../Lists/listsManager.php';
-    require_once __DIR__.'/../Contacts/contactsManager.php';
-    require_once __DIR__.'/../Fields/fieldsManager.php';
-**/
+   
+    require_once __DIR__.'/authenticationManager.php';
+    require_once __DIR__.'/accountManager.php';
+    require_once __DIR__.'/messagesManager.php';
+    require_once __DIR__.'/campaignsManager.php';
+    require_once __DIR__.'/listsManager.php';
+    require_once __DIR__.'/contactsManager.php';
+    require_once __DIR__.'/fieldsManager.php';
+
    
 /**
     use sarbacane_sdk\authenticationManager;
