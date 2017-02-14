@@ -12,7 +12,8 @@
     "require": {
 	"php": ">=5.3.0",
 	"ext-curl": "^0.0.0",
-	"phpmailer/phpmailer": "~5.2"
+	"phpmailer/phpmailer": "~5.2",
+        "sarbacane-sdk/php": "dev-master"
     },
     "autoload": {
         "psr-0" : {

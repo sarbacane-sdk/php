@@ -32,7 +32,6 @@ class baseManager {
         $mail->Body = $email->htmlBody;
         $mail->AltBody = $email->textBody;
         $mail->Subject = $email->subject;
-        $mail->Body = $email->message;
         if (!$mail->send()) {
             echo 'Error: Message could not be sent: ' . $mail->ErrorInfo;
         }
