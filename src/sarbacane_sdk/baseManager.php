@@ -4,7 +4,7 @@ namespace sarbacane_sdk;
 
 class baseManager {
 
-    protected static $sdkVersion = "1.0.5";
+    protected static $sdkVersion = "1.0.6";
     protected static $baseURL = 'https://api.primotexto.com/v2/';
     protected static $smtpHost = 'smtp.tipimail.com';
     protected static $smtpPort = 587;
