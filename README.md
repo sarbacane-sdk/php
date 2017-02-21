@@ -2,6 +2,7 @@
 ### Sarbacane SDK PHP - Send e-mail and text messages (sms)
 
 
+* Account & API Key
 * Installation
 * Download sources
 * Authentication
@@ -9,6 +10,31 @@
 * Send E-mail
 * Send SMS
 * Webhooks
+
+
+#### Account & API Key
+
+##### E-mail
+
+[Create E-mail account](https://www.tipimail.com/register)
+
+
+[Generate your E-mail Tokens (be logged in first)](https://app.tipimail.com/#/app/settings/smtp_and_apis)
+
+![email tokens](https://cloud.githubusercontent.com/assets/18444530/23157829/fda5247c-f81c-11e6-936a-cc4905315cd9.jpg)
+
+
+
+##### SMS
+
+[Create SMS account](https://www.primotexto.com/creer_compte.asp)
+
+
+[Generate your SMS API Key (be logged in first)](https://www.primotexto.com/webapp/#/developer/keys)
+
+![api_key_real](https://cloud.githubusercontent.com/assets/18444530/23158387/52492cc4-f81f-11e6-8535-9438f11aa0f5.png)
+
+
 
 #### Installation
 
