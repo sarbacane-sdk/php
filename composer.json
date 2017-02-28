@@ -1,5 +1,6 @@
 {
     "name": "sarbacane-sdk/php",
+    "version": "1.0.6",
     "description": "Sarbacane SDK to send e-mail and text messages (sms).",
     "license": "MIT",
     "authors": [
