@@ -1,4 +1,4 @@
-![alt tag](https://cloud.githubusercontent.com/assets/18444530/22825087/81a050e8-ef8b-11e6-8b33-2508b9be27a8.png)
+![alt tag](https://cloud.githubusercontent.com/assets/18444530/23370454/08b3a170-fd15-11e6-946c-ecc2db251ad7.png)
 ### Sarbacane SDK PHP - Send e-mail and text messages (sms)
 
 
@@ -21,7 +21,7 @@
 
 [Generate your E-mail Tokens (be logged in first)](https://app.tipimail.com/#/app/settings/smtp_and_apis)
 
-![email tokens](https://cloud.githubusercontent.com/assets/18444530/23157829/fda5247c-f81c-11e6-936a-cc4905315cd9.jpg)
+![email tokens](https://cloud.githubusercontent.com/assets/18444530/23396595/dd275f1c-fd94-11e6-8b92-1f3c3a707ddc.jpg)
 
 
 
@@ -32,7 +32,7 @@
 
 [Generate your SMS API Key (be logged in first)](https://www.primotexto.com/webapp/#/developer/keys)
 
-![api_key_real](https://cloud.githubusercontent.com/assets/18444530/23158387/52492cc4-f81f-11e6-8535-9438f11aa0f5.png)
+![api_key_real](https://cloud.githubusercontent.com/assets/18444530/23396617/f0e0f996-fd94-11e6-9440-cb41f54c5a4b.png)
 
 
 
@@ -56,14 +56,14 @@ git clone https://github.com/sarbacane-sdk/php.git .
 ###### E-mail
 
 ```
-sarbacane_sdk\authenticationManager::setEmailTokens("31649838f306ebc8sca6b67be8cd7e20", "3413e65fbef014493537e77f811ca5ca");
+sarbacane_sdk\authenticationManager::setEmailTokens('MY_EMAIL_USERNAME', 'MY_EMAIL_APIKEY');
 ```
 
 
 ###### SMS
 
 ```
-sarbacane_sdk\authenticationManager::setSmsApikey('da3f2a93592ad9f43fb38977e8f64d76');
+sarbacane_sdk\authenticationManager::setSmsApikey('MY_SMS_APIKEY');
 ```
 
 
