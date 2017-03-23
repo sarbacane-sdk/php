@@ -4,7 +4,9 @@ namespace sarbacane_sdk;
 
 class baseManager {
 
-    protected static $sdkVersion = "1.0.6";
+    protected static $sdkVersion = '1.0.6';
+    protected static $sdkTitle = 'sarbacane-sdk-php';
+    protected static $sdkHeader = 'X-Sarbacane-SDK';
     protected static $baseURL = 'https://api.primotexto.com/v2/';
     protected static $smtpHost = 'smtp.tipimail.com';
     protected static $smtpPort = 587;
@@ -22,7 +24,7 @@ class baseManager {
         $mail->SMTPSecure = 'tls';
         $mail->Port = baseManager::$smtpPort;
         
-        $mail->addCustomHeader('X-Sarbacane-SDK-PHP', baseManager::$sdkVersion);
+        $mail->addCustomHeader(baseManager::$sdkHeader, baseManager::$sdkTitle. ' '.baseManager::$sdkVersion);
 
         $mail->setFrom($email->mailFrom, $email->mailFromName);
         foreach ($email->recipients as $address) {
@@ -45,6 +47,7 @@ class baseManager {
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, baseManager::$CURLOPT_SSL_VERIFYPEER);
         curl_setopt($curl, CURLOPT_HTTPHEADER, array(
             'Content-Type: application/json',
+            baseManager::$sdkHeader.': '. baseManager::$sdkTitle. ' '.baseManager::$sdkVersion,
             'X-Primotexto-ApiKey: ' . authenticationManager::getSmsApikey(),
         ));
         return $curl;
